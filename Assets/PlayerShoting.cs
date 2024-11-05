@@ -16,10 +16,6 @@ public class PlayerShoting : MonoBehaviour
         {
             Shoot();
         }
-        if(Input.GetKey(KeyCode.X))
-        {
-            Shoot();
-        }
     }
 
     void RotateBulletSpawnPointTowardsMouse()

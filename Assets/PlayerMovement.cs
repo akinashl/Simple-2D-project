@@ -12,8 +12,12 @@ public class RigidbodyMovement : MonoBehaviour
     public float initialSpeed = 5f;
     public float runMiltiplier;
 
+    private CameraShake cameraShakeScript;
+    public GameObject cameraShakeObject;
+
     void Start()
     {
+        cameraShakeObject = GameObject.FindGameObjectWithTag ("Shake");
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -31,5 +35,13 @@ public class RigidbodyMovement : MonoBehaviour
         // Assign velocity directly to the Rigidbody
         rb2d.velocity = moveDirection * moveSpeed;
 
+    }
+     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Wall"))
+        {
+            cameraShakeScript.shakeTimer = 5f;
+            
+        }
     }
 }
