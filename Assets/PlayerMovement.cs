@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]         //Tell Unity to add theses components to the gameobject this code is attached to.
 [RequireComponent(typeof(BoxCollider2D))]       //We will still need to tweak some of the settings.
@@ -14,6 +15,7 @@ public class RigidbodyMovement : MonoBehaviour
 
     private CameraShake cameraShakeScript;
     public GameObject cameraShakeObject;
+    public float HP;
 
     void Start()
     {
@@ -34,7 +36,10 @@ public class RigidbodyMovement : MonoBehaviour
 
         // Assign velocity directly to the Rigidbody
         rb2d.velocity = moveDirection * moveSpeed;
-
+        if (HP <= 0)
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
      void OnCollisionEnter2D(Collision2D collision)
     {
@@ -42,6 +47,10 @@ public class RigidbodyMovement : MonoBehaviour
         {
             cameraShakeScript.shakeTimer = 5f;
             
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            HP -= 10;
         }
     }
 }
