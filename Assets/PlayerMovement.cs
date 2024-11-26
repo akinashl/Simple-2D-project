@@ -16,11 +16,13 @@ public class RigidbodyMovement : MonoBehaviour
     private CameraShake cameraShakeScript;
     public GameObject cameraShakeObject;
     public float HP;
+    Animator animator;
 
     void Start()
     {
         cameraShakeObject = GameObject.FindGameObjectWithTag ("Shake");
         rb2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -29,11 +31,12 @@ public class RigidbodyMovement : MonoBehaviour
         float moveInputX = Input.GetAxisRaw("Horizontal"); // For horizontal movement (left/right)
         float moveInputY = Input.GetAxisRaw("Vertical");   // For vertical movement (up/down)
 
+        animator.SetFloat("InputX", moveInputX);
+        animator.SetFloat("InputY", moveInputY);
 
-        // Normalise the vector so that we don't move faster when moving diagonally.
         Vector2 moveDirection = new Vector2(moveInputX, moveInputY);
         moveDirection.Normalize();
-
+        
         // Assign velocity directly to the Rigidbody
         rb2d.velocity = moveDirection * moveSpeed;
         if (HP <= 0)
