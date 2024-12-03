@@ -8,7 +8,6 @@ public class Destroy : MonoBehaviour
     {
         if(collision.gameObject)
         {
-            Debug.Log("Collision detected");
             Destroy(gameObject);
         }
     }
