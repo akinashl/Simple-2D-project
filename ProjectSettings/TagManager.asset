@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Wall
   - Shake
+  - HealPotion
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,9 +12,12 @@ using UnityEngine.SceneManagement;
 public class RigidbodyMovement : MonoBehaviour
 {
     Rigidbody2D rb2d;
+    public Rigidbody player;
     float moveSpeed = 5f;
     public float initialSpeed = 5f;
     public float runMiltiplier;
+    public float maxHealth;
+    private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
 
     private CameraShake cameraShakeScript;
     public GameObject cameraShakeObject;
@@ -23,8 +29,8 @@ public class RigidbodyMovement : MonoBehaviour
         cameraShakeObject = GameObject.FindGameObjectWithTag ("Shake");
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        HP = maxHealth;
     }
-
     void Update()
     {
         moveSpeed = Input.GetKey(KeyCode.LeftShift)? initialSpeed * runMiltiplier : initialSpeed;
@@ -43,6 +49,20 @@ public class RigidbodyMovement : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
+        if (HP >= 0 && HP <= maxHealth)
+        {
+            StartCoroutine(RegenHP());
+        }
+    }
+    IEnumerator RegenHP()
+    {
+        yield return new WaitForSeconds(5);
+        
+        while (HP < maxHealth)
+        {
+            HP += maxHealth / 100;
+            yield return regenTick;
+        }
     }
      void OnCollisionEnter2D(Collision2D collision)
     {
@@ -55,5 +75,10 @@ public class RigidbodyMovement : MonoBehaviour
         {
             HP -= 10;
         }
+        if(collision.gameObject.CompareTag("HealPotion"))
+        {
+            HP += 10;
+        }
     }
+
 }
