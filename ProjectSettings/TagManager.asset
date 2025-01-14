@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Shake
   - HealPotion
+  - Portal
   layers:
   - Default
   - TransparentFX

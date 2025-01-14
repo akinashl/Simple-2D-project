@@ -28,14 +28,21 @@ public class BasicEnemyFollow : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            Debug.LogWarning("Enemy Died");
         }
         if (collision.gameObject.tag == "Bullet")
         {
             enemyhp -= 5;
+            Debug.LogWarning("Enemy Takes Damage");
+        }
+        if (enemyhp <= 5)
+        {
+            Debug.Log("Enemy is Low *hp*");
         }
         if (enemyhp <= 0)
         {
             Destroy(gameObject);
+            Debug.LogWarning("Enemy Died");
         }
     }
 }

@@ -1,11 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
+using Cinemachine;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]         //Tell Unity to add theses components to the gameobject this code is attached to.
 [RequireComponent(typeof(BoxCollider2D))]       //We will still need to tweak some of the settings.
@@ -30,6 +26,8 @@ public class RigidbodyMovement : MonoBehaviour
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         HP = maxHealth;
+        Debug.Log("Player have been spawned");
+        Debug.Log("Rigidbody velocity" + moveSpeed);
     }
     void Update()
     {
@@ -78,6 +76,15 @@ public class RigidbodyMovement : MonoBehaviour
         if(collision.gameObject.CompareTag("HealPotion"))
         {
             HP += 10;
+        }
+        if(collision.gameObject.CompareTag("Portal"))
+        {
+            CinemachineVirtualCamera cmvCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+            cmvCamera.enabled = false;
+            transform.position = new Vector2 (34f, 175f);
+            Camera.main.transform.position = new Vector3 (34f, 175f, Camera.main.transform.position.z);  
+            cmvCamera.enabled = true;
+
         }
     }
 
