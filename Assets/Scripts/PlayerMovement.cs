@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]         //Tell Unity to add theses components to the gameobject this code is attached to.
 [RequireComponent(typeof(BoxCollider2D))]       //We will still need to tweak some of the settings.
-public class RigidbodyMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D rb2d;
     public Rigidbody player;
@@ -13,7 +13,6 @@ public class RigidbodyMovement : MonoBehaviour
     public float initialSpeed = 5f;
     public float runMiltiplier;
     public float maxHealth;
-    private WaitForSeconds regenTick = new WaitForSeconds(0.1f);
 
     private CameraShake cameraShakeScript;
     public GameObject cameraShakeObject;
@@ -29,7 +28,7 @@ public class RigidbodyMovement : MonoBehaviour
         Debug.Log("Player have been spawned");
         Debug.Log("Rigidbody velocity" + moveSpeed);
     }
-    void Update()
+    public void Update()
     {
         moveSpeed = Input.GetKey(KeyCode.LeftShift)? initialSpeed * runMiltiplier : initialSpeed;
         float moveInputX = Input.GetAxisRaw("Horizontal"); // For horizontal movement (left/right)
@@ -46,20 +45,6 @@ public class RigidbodyMovement : MonoBehaviour
         if (HP <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);
-        }
-        if (HP >= 0 && HP <= maxHealth)
-        {
-            StartCoroutine(RegenHP());
-        }
-    }
-    IEnumerator RegenHP()
-    {
-        yield return new WaitForSeconds(5);
-        
-        while (HP < maxHealth)
-        {
-            HP += maxHealth / 100;
-            yield return regenTick;
         }
     }
      void OnCollisionEnter2D(Collision2D collision)

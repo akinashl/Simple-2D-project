@@ -10,6 +10,7 @@ TagManager:
   - Shake
   - HealPotion
   - Portal
+  - StrengthRing
   layers:
   - Default
   - TransparentFX

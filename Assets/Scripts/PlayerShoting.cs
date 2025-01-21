@@ -6,6 +6,9 @@ public class PlayerShoting : MonoBehaviour
     public Transform firePointRotation;
     public Transform bulletSpawnPoint;
     public float bulletSpeed = 20f;
+
+    public float bulletDamage = 5;
+    public int damagemultiplayer = 2;
     // Start is called before the first frame update
     void Update()
     {
@@ -36,10 +39,26 @@ public class PlayerShoting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, firePointRotation.rotation);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        BulletScript bulletScript = bullet.GetComponent<BulletScript>();
 
         rb.velocity = firePointRotation.right * bulletSpeed;
+        bulletScript.damage = bulletDamage;
 
         Destroy(bullet, 3f);
 
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("StrengthRing"))
+        {
+            bulletDamage *= damagemultiplayer;
+        }
+        
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            HealthScriptForOthers others = GetComponent<HealthScriptForOthers>();
+            others.othershp -= bulletDamage;
+            Debug.Log("HP TAKEN");
+        }
     }
 }
