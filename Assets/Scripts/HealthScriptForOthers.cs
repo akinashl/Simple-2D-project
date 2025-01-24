@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class HealthScriptForOthers : MonoBehaviour
 {
-    public float othershp;
-    public float maxhp;
+    public int othershp;
+    public int maxhp;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,16 @@ public class HealthScriptForOthers : MonoBehaviour
         if (othershp <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    void OnColliderEnter2D(Collider2D collider)
+    {
+        FindObjectOfType<PlayerShoting>().bulletDamage = damage;
+
+        if(collider.CompareTag("Bullet"))
+        {
+            othershp -= damage;
+            Debug.Log("Enemy got hit");
         }
     }
 }

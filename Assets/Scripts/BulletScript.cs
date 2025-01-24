@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float damage;
+    public int damage;
+    public int enemyhp;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject)
+        FindObjectOfType<PlayerShoting>().bulletDamage = damage;
+        FindObjectOfType<HealthScriptForOthers>().othershp = enemyhp;
+        if (collision.gameObject)
         {
             Destroy(gameObject);
         }
+
+
+        /*if (collision.gameObject.CompareTag("Enemy"))
+        {
+            enemyhp -= damage;
+            Debug.Log("HP TAKEN");
+        }*/
     }
 }
