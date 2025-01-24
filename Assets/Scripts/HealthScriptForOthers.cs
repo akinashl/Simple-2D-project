@@ -5,31 +5,30 @@ using UnityEngine;
 
 public class HealthScriptForOthers : MonoBehaviour
 {
-    public int othershp;
+    public int health;
     public int maxhp;
     public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
-        othershp = maxhp;
+        health = maxhp;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (othershp <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-    void OnColliderEnter2D(Collider2D collider)
-    {
-        FindObjectOfType<PlayerShoting>().bulletDamage = damage;
+        BulletScript bullet = other.GetComponent<BulletScript>();
 
-        if(collider.CompareTag("Bullet"))
+        if(other.CompareTag("Bullet"))
         {
-            othershp -= damage;
+            health -= bullet.damage;
             Debug.Log("Enemy got hit");
+
+            if (health <= 0)
+            {
+                Debug.Log("Enemy died");
+                Destroy(gameObject);
+            }
         }
     }
 }

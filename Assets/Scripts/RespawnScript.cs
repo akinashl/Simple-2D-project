@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RespawnScript : MonoBehaviour
 {
-    public GameObject respawnpoint;
+    public GameObject spawn_point;
     public GameObject Player;
     // Start is called before the first frame update
     
@@ -10,7 +10,7 @@ public class RespawnScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Player.transform.position = respawnpoint.transform.position;
+            Player.transform.position = spawn_point.transform.position;
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     public float speed;
-    public float enemyhp;
+    public float health;
     private Transform player;
     private Animator anim;
     // Start is called before the first frame update
@@ -21,19 +21,21 @@ public class EnemyFollow : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         anim.SetBool("isRun", true);
     }
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        BulletScript bullet = other.GetComponent<BulletScript>();
+        if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "Bullet")
+        else if (other.CompareTag("Bullet"))
         {
-            enemyhp -= 5;
-        }
-        if (enemyhp <= 0)
-        {
-            Destroy(gameObject);
+            health -= bullet.damage;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

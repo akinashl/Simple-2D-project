@@ -7,14 +7,15 @@ public class BasicEnemyFollow : MonoBehaviour
 {
     NavMeshAgent agent;
     GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerMovement>().gameObject;
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-
-        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame

@@ -7,9 +7,11 @@ public class EndlessSpawn : MonoBehaviour
     public Transform spawnpoint;
     public Transform secondspn;
     public Transform thirdspn;
+
     float spawnInterval = 4f;
     float minimumSpawnInterval = 1f;
     float intervalDecrease = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {

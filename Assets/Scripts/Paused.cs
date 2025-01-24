@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Paused : MonoBehaviour
 {
-    public GameObject pause;
+    PlayerMovement player;
+    public GameObject PausePanel;
+
     void Start()
     {
-        pause.SetActive(false);
+        player = FindObjectOfType<PlayerMovement>();
+
+        PausePanel.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,16 +20,27 @@ public class Paused : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            pause.SetActive(true);
-            Time.timeScale = 0;
+            if (player.is_paused)
+            {
+                player.is_paused = false;
+                PausePanel.SetActive(false);
+                Time.timeScale = 1;
+            }
+            else
+            {
+                PausePanel.SetActive(true);
+                Time.timeScale = 0;
+                player.is_paused = true;
+            }
         }
     }
-    public void PauseOff()
+    public void PausePanelOff()
     {
-        pause.SetActive(false);
+        PausePanel.SetActive(false);
         Time.timeScale = 1;
+        player.is_paused = false;
     }
-      public void Menu()
+    public void Menu()
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;

@@ -9,19 +9,21 @@ public class BoxScript : MonoBehaviour
     public GameObject potion;
     public Transform potionspawn;
     public Transform potionrotation;
-    public int HP;
+
+    public int health;
+
     // Start is called before the first frame update
     void Start()
     {
-        HP = 30;
+        health = 30;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            HP -= 10;
+            health -= 10;
         }
-        if (HP <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
             Instantiate(potion, potionrotation.position, potionrotation.rotation);
