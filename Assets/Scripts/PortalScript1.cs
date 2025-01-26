@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PortalScript1 : MonoBehaviour
 {
-    void OnColiderEnter2D(Collider2D collider)
+    public Transform lvl2;
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            transform.position = new Vector2(34f, 175f);
+            other.transform.position = lvl2.position;
         }
     }
 }

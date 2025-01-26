@@ -66,10 +66,6 @@ public class PlayerMovement : MonoBehaviour
     {
         healthbar.fillAmount = (float)health / (float)_maxHealth;
     }
-    void UpdateDamage()
-    {
-
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
