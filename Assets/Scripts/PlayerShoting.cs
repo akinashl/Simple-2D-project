@@ -6,20 +6,29 @@ public class PlayerShoting : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePointRotation;
     public Transform bulletSpawnPoint;
+    PlayerMovement player;
+    
 
     public float bulletSpeed = 20f;
     public int bulletDamage = 5;
     public int damagemultiplayer = 2;
-
+    
+    void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+    }
     // Start is called before the first frame update
     void Update()
     {
+        if(!player.is_paused)
+        {
         RotateBulletSpawnPointTowardsMouse();
 
 
         if(Input.GetButtonDown("Fire1"))
         {
             Shoot();
+        }
         }
     }
 

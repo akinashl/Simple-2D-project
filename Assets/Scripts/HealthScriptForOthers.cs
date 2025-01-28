@@ -8,6 +8,10 @@ public class HealthScriptForOthers : MonoBehaviour
     public int health;
     public int maxhp;
     public int damage;
+    
+    public GameObject coin;
+    public Transform coinPos;
+    public Transform coinRot;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,7 @@ public class HealthScriptForOthers : MonoBehaviour
             {
                 Debug.Log("Enemy died");
                 Destroy(gameObject);
+                coin = Instantiate(coin, coinPos.position, coinRot.rotation);
             }
         }
     }

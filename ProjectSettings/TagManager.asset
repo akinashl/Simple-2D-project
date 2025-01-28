@@ -11,6 +11,8 @@ TagManager:
   - HealPotion
   - Portal
   - StrengthRing
+  - Coin
+  - Key
   layers:
   - Default
   - TransparentFX

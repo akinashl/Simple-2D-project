@@ -17,9 +17,9 @@ public class BoxScript : MonoBehaviour
     {
         health = 30;
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collider.gameObject.CompareTag("Bullet"))
         {
             health -= 10;
         }

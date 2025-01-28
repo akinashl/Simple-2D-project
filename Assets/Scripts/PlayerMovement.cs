@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
-    CameraShake cameraShakeScript;
 
     [Header("Values")]
     [SerializeField] float _moveSpeed = 5f;
@@ -25,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] int _maxHealth;
     public int health;
+    public CoinManager cm;
+    public Death wall;
+
 
     
     void Start()
@@ -86,6 +88,16 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector2 (34f, 175f);
             Camera.main.transform.position = new Vector3 (34f, 175f, Camera.main.transform.position.z);  
             cmvCamera.enabled = true;
+        }
+        if(other.gameObject.CompareTag("Coin"))
+        {
+            cm.coinCoint++;
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.CompareTag("Key"))
+        {
+            Destroy(other.gameObject);
+            wall.hp --;
         }
     }
 }
