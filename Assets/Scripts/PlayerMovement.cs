@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public bool is_paused = false;
     public Image healthbar;
+    public Renderer playerRenderer;
 
     Rigidbody2D rb;
     Animator animator;
@@ -22,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]  float _runMiltiplier;
 
     [Header("Parameters")]
-    [SerializeField] int _maxHealth;
-    public int health;
+    [SerializeField] float _maxHealth;
+    public float health;
     public CoinManager cm;
     public Death wall;
 
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         Debug.Log("Player have been spawned");
         Debug.Log("Rigidbody velocity" + _moveSpeed);
+        playerRenderer = GetComponent<Renderer>();
     }
 
     public void Update()
@@ -61,19 +63,24 @@ public class PlayerMovement : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+
         }
     }
 
     void UpdateHealth()
     {
-        healthbar.fillAmount = (float)health / (float)_maxHealth;
+        healthbar.fillAmount = health / _maxHealth;
+        Debug.Log("_MaxHealth: " + _maxHealth );
+        Debug.Log("Current Health: " + health );
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
+        HealthScriptForOthers hp =  other.GetComponent<HealthScriptForOthers>();
         if (other.gameObject.tag == "Enemy")
         {
-            health -= 10;
+            health -= hp.damage;
+            Debug.Log("DAMAGE TAKEN");
             UpdateHealth();
         }
         if(other.gameObject.CompareTag("HealPotion"))

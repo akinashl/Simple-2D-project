@@ -27,7 +27,7 @@ public class EnemyFollow : MonoBehaviour
         BulletScript bullet = other.GetComponent<BulletScript>();
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            health -= 10;
         }
         else if (other.CompareTag("Bullet"))
         {

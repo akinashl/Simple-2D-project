@@ -7,11 +7,13 @@ public class BasicEnemyFollow : MonoBehaviour
 {
     NavMeshAgent agent;
     GameObject player;
+    SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -22,17 +24,20 @@ public class BasicEnemyFollow : MonoBehaviour
     void Update()
     {
         agent.SetDestination(player.transform.position);
+    
+        if(agent.velocity.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        if(agent.velocity.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (collision.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-        if(collision.CompareTag("Player"))
-        {
-            Destroy(gameObject);    
-        }
     }
 }
