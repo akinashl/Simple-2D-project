@@ -12,10 +12,5 @@ public class GolemScript : MonoBehaviour
     }
     public void Update()
     {
-        float moveInputX = Input.GetAxisRaw("Horizontal");
-        float moveInputY = Input.GetAxisRaw("Vertical");
-
-        animator.SetFloat("Inputx", moveInputX);
-        animator.SetFloat("InputY", moveInputY);
     }
 }

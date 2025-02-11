@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool is_paused = false;
     public Image healthbar;
     public Renderer playerRenderer;
+    public GameObject LEVEL3PORTAL;
 
     Rigidbody2D rb;
     Animator animator;
@@ -63,11 +64,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-
+            if (cm.coinCoint >= 100)
+            {
+                LEVEL3PORTAL.SetActive(true);
+            }
         }
     }
 
-    void UpdateHealth()
+    public void UpdateHealth()
     {
         healthbar.fillAmount = health / _maxHealth;
         Debug.Log("_MaxHealth: " + _maxHealth );
@@ -87,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             health += 10;
             UpdateHealth();
+            Debug.Log("HEALTH OBTAINED");
         }
         if(other.gameObject.CompareTag("Portal"))
         {

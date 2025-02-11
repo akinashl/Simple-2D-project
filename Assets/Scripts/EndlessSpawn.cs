@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Threading;
 
 public class EndlessSpawn : MonoBehaviour
 {
@@ -11,14 +12,22 @@ public class EndlessSpawn : MonoBehaviour
     float spawnInterval = 4f;
     float minimumSpawnInterval = 1f;
     float intervalDecrease = 0.1f;
+    public bool level1completed;
+
+    private IEnumerator spawnCoroutine;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
+        level1completed = false;
+        spawnCoroutine = SpawnEnemies();
+        StartCoroutine(spawnCoroutine);
     }
     IEnumerator SpawnEnemies()
     {
+        if(level1completed == false)
+        {
+        PortalScript1 portal = GetComponent<PortalScript1>();
         while (true)
         {
             if (objectToSpawn != null && spawnpoint != null)
@@ -34,5 +43,11 @@ public class EndlessSpawn : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval);
             spawnInterval = Mathf.Max(minimumSpawnInterval, spawnInterval - intervalDecrease);
         }
+        }
+    }
+
+    public void StopSpawningEnemies()
+    {
+        StopCoroutine(spawnCoroutine);
     }
 }

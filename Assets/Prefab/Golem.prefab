@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 75
   maxhp: 75
-  damage: 100
+  damage: 20
   coin: {fileID: 3413469877513469840, guid: c8cac9cee4e90af4e974e3825c1c3d37, type: 3}
   coinPos: {fileID: 825039430514972319}
   coinRot: {fileID: 825039430514972319}

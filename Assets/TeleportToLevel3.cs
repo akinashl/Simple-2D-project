@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalScript1 : MonoBehaviour
+public class TeleportToLevel3 : MonoBehaviour
 {
-    public EndlessSpawn spawn;
-    public Transform lvl2;
+    public Transform lvl3;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            spawn.StopSpawningEnemies();
-            other.transform.position = lvl2.position;
+            other.transform.position = lvl3.position;
         }
     }
 }

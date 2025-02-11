@@ -13,6 +13,7 @@ TagManager:
   - StrengthRing
   - Coin
   - Key
+  - LVL3TP
   layers:
   - Default
   - TransparentFX
