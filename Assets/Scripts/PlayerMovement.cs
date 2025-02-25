@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public float health;
     public CoinManager cm;
     public Death wall;
+    AudioSource audioSource;
+    public AudioClip pickup;
 
 
     
@@ -35,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         health = _maxHealth;
 
@@ -110,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             wall.hp --;
+            audioSource.PlayOneShot(pickup);
         }
     }
 }
