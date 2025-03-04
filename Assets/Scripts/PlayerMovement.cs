@@ -19,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
 
     [Header("Values")]
-    [SerializeField] float _moveSpeed = 5f;
-    [SerializeField]  float _initialSpeed = 5f;
-    [SerializeField]  float _runMiltiplier;
+    public float _moveSpeed = 5f;
+    public float _initialSpeed = 5f;
+    public float _runMiltiplier;
 
     [Header("Parameters")]
     [SerializeField] float _maxHealth;

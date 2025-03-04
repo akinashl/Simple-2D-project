@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 536748313774be645a41b5980334208e
+guid: 629008b7bee808648b7fc8ef0b31d212
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_0
+      name: ItemsPotionA_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 31
-        height: 147
+        x: 36
+        y: 36
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf2c882e7033084eaf7865370bc6f51
-      internalID: 37037588
+      spriteID: 6e6a75f8b40fbb44ea915a0274b90417
+      internalID: 1514441348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_1
+      name: ItemsPotionA_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 60
-        height: 153
+        x: 138
+        y: 35
+        width: 13
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,145 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c3970f1ba3a4294e963afb1afa4db2c
-      internalID: -145218785
+      spriteID: 6e15d72ad98b17949a6385a62b6622f1
+      internalID: -769513964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_2
+      name: ItemsPotionA_2
       rect:
         serializedVersion: 2
-        x: 97
-        y: 111
-        width: 30
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38f0500a6f230bf44941eb82926f9918
-      internalID: -1014317476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_3
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 112
-        width: 26
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53ae3091f6a3e834a80051079ba9a4b1
-      internalID: -581760411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_4
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 109
-        width: 22
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 962ca70d22fe4f746893006b016772ee
-      internalID: -1168626759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_5
-      rect:
-        serializedVersion: 2
-        x: 193
-        y: 112
-        width: 30
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdebc942fd65ea247a340ef19e933035
-      internalID: 417037913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_6
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 112
-        width: 26
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf6fa79f4ec9fbb4298b9e3fe1f474ab
-      internalID: -1016681524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_7
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 109
-        width: 22
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1cef213b1cca3fb49a17dc9b2151b979
-      internalID: -2056705373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_8
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 81
-        width: 25
+        x: 167
+        y: 34
+        width: 19
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -292,167 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3d46c767308693448fcfc3fbe3ff614
-      internalID: 457733079
+      spriteID: 71b60bad657f36c42b4c61744e30c0c2
+      internalID: -1885505909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_9
+      name: ItemsPotionA_6
       rect:
         serializedVersion: 2
-        x: 131
-        y: 80
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a04bb4b4649b24947a7a088df3026681
-      internalID: -1325515128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_10
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 80
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a56b896d2f1023f4ca7ad6751396bc79
-      internalID: 1352809965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_11
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 81
-        width: 25
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe375a1a0084de5498b9db5d162a9dfb
-      internalID: 1522548887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_12
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 80
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4674df11a7746ce4db15f6dcc239cc4f
-      internalID: -300117117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_13
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 80
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e05a7328709495249a2fd0a44cac6120
-      internalID: 91281664
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_14
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 32
-        width: 30
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8220c4316fd9f734aba94cb46f6f894b
-      internalID: 580003930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_15
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 32
-        width: 26
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 040560183f43b074ab59ae6451aa2be8
-      internalID: 854363356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_16
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 29
+        x: 262
+        y: 37
         width: 22
-        height: 49
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -460,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a342d747fb2bec4f83c12e06cbb3a1a
-      internalID: -1532534646
+      spriteID: 92708bfd61f5def4a817f3f9e070a682
+      internalID: 1850090055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_17
+      name: ItemsPotionA_7
       rect:
         serializedVersion: 2
-        x: 193
-        y: 32
-        width: 30
-        height: 48
+        x: 330
+        y: 35
+        width: 13
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,61 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17458e5b42031974fb2ba689af456f27
-      internalID: -273996600
+      spriteID: 03485470d5370d941b13fc445187129a
+      internalID: 2045244685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_18
+      name: ItemsPotionA_8
       rect:
         serializedVersion: 2
-        x: 227
-        y: 32
-        width: 26
-        height: 46
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8078cebe62a11a44bb2ac15bfcf566ba
-      internalID: 89461158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_19
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 29
-        width: 22
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac1321952f1d93043b6bf39b5acb75e7
-      internalID: -1323991998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_20
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 1
-        width: 25
+        x: 359
+        y: 34
+        width: 19
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -544,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1827597058d954295e6b3a64887ce5
-      internalID: 1659930795
+      spriteID: db2d8e95e6976fb4eb9152188173511c
+      internalID: -1282883031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_21
+      name: ItemsPotionA_9
       rect:
         serializedVersion: 2
-        x: 131
-        y: 0
+        x: 3
+        y: 36
         width: 26
-        height: 29
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138a308642be2f548a10c6bbe40d20df
-      internalID: 2084440711
+      spriteID: 1820f4b991aff7948ba6473d61e85027
+      internalID: -1618988390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_22
+      name: ItemsPotionA_10
       rect:
         serializedVersion: 2
-        x: 163
-        y: 0
-        width: 26
-        height: 16
+        x: 74
+        y: 35
+        width: 13
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,19 +271,103 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f0f3c14dc6b3c4c8937063f1bcd211
-      internalID: -1526695582
+      spriteID: 8261601b9bcadfb4e8f993fb2d8cddb3
+      internalID: 1410267397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_23
+      name: ItemsPotionA_11
       rect:
         serializedVersion: 2
-        x: 196
-        y: 1
-        width: 25
+        x: 106
+        y: 35
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49257e7f1f764f4aab056514674142c
+      internalID: 421722387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_12
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 36
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3efee00f87104e4c9c3411025c1523b
+      internalID: 511583405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_14
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 38
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1bbd614cee82845942a67b4d73e1f5
+      internalID: -515211510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_15
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 35
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef64772aa05506b48936398fa8d6501c
+      internalID: 1169457822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_18
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2
+        width: 19
         height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -607,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0b97dcea7671414b940c71becc1e260
-      internalID: 87805439
+      spriteID: 09d89c92e04e5a1439c91ff43417a401
+      internalID: 2074284434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_24
+      name: ItemsPotionA_19
       rect:
         serializedVersion: 2
-        x: 227
-        y: 0
-        width: 26
-        height: 29
+        x: 136
+        y: 3
+        width: 17
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -628,19 +397,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ed280204093c74469da496c5292a2d7
-      internalID: -146630783
+      spriteID: bbc694bf579519f4780c7898a0102b70
+      internalID: 1496142155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TopDownHouse_DoorsAndWindows_25
+      name: ItemsPotionA_20
       rect:
         serializedVersion: 2
-        x: 259
-        y: 0
-        width: 26
+        x: 166
+        y: 18
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f1f19acb3dde941a3fe46434befd04
+      internalID: 307571104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_21
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 24
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6e8f2cf41f6d04090a36586271e6c9
+      internalID: 861218895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 9
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -649,8 +460,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 735b26e2d0e523040aa98c5ba0e6c35d
-      internalID: -593444004
+      spriteID: 2bdab47256fc1f04a95c81085dd9efab
+      internalID: -1877817296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_23
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 8
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662e6c72d815d7740aaa4f7cc29baaab
+      internalID: -1283176553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_24
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11366866a6635b408b9e330dc4e77c7
+      internalID: 677180208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_25
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 3
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd79a6e4f753034290a9828057a260e
+      internalID: -1992559511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_26
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdd93f969358cf4d92e9af7813e33af
+      internalID: -757326477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_27
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 6
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a9ecb31952d6a45bad63e2d476c014
+      internalID: 745613655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_28
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 12
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703e4c8ea10bfa441a87f4f0b30db5df
+      internalID: -89367097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_29
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 15
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f611ce49d3c8c0944a15b4be9a91385d
+      internalID: -359841005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_30
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 4
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b1e42b832c0ec49b053cb50d93d91b
+      internalID: -587058068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ItemsPotionA_31
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 7
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f2df13cc1e43449a40ff91ecbe356b
+      internalID: 1494923240
       vertices: []
       indices: 
       edges: []
@@ -666,32 +666,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TopDownHouse_DoorsAndWindows_0: 37037588
-      TopDownHouse_DoorsAndWindows_1: -145218785
-      TopDownHouse_DoorsAndWindows_10: 1352809965
-      TopDownHouse_DoorsAndWindows_11: 1522548887
-      TopDownHouse_DoorsAndWindows_12: -300117117
-      TopDownHouse_DoorsAndWindows_13: 91281664
-      TopDownHouse_DoorsAndWindows_14: 580003930
-      TopDownHouse_DoorsAndWindows_15: 854363356
-      TopDownHouse_DoorsAndWindows_16: -1532534646
-      TopDownHouse_DoorsAndWindows_17: -273996600
-      TopDownHouse_DoorsAndWindows_18: 89461158
-      TopDownHouse_DoorsAndWindows_19: -1323991998
-      TopDownHouse_DoorsAndWindows_2: -1014317476
-      TopDownHouse_DoorsAndWindows_20: 1659930795
-      TopDownHouse_DoorsAndWindows_21: 2084440711
-      TopDownHouse_DoorsAndWindows_22: -1526695582
-      TopDownHouse_DoorsAndWindows_23: 87805439
-      TopDownHouse_DoorsAndWindows_24: -146630783
-      TopDownHouse_DoorsAndWindows_25: -593444004
-      TopDownHouse_DoorsAndWindows_3: -581760411
-      TopDownHouse_DoorsAndWindows_4: -1168626759
-      TopDownHouse_DoorsAndWindows_5: 417037913
-      TopDownHouse_DoorsAndWindows_6: -1016681524
-      TopDownHouse_DoorsAndWindows_7: -2056705373
-      TopDownHouse_DoorsAndWindows_8: 457733079
-      TopDownHouse_DoorsAndWindows_9: -1325515128
+      ItemsPotionA_0: 1514441348
+      ItemsPotionA_1: -769513964
+      ItemsPotionA_10: 1410267397
+      ItemsPotionA_11: 421722387
+      ItemsPotionA_12: 511583405
+      ItemsPotionA_13: 361106215
+      ItemsPotionA_14: -515211510
+      ItemsPotionA_15: 1169457822
+      ItemsPotionA_16: -915143030
+      ItemsPotionA_17: 1395441877
+      ItemsPotionA_18: 2074284434
+      ItemsPotionA_19: 1496142155
+      ItemsPotionA_2: -1885505909
+      ItemsPotionA_20: 307571104
+      ItemsPotionA_21: 861218895
+      ItemsPotionA_22: -1877817296
+      ItemsPotionA_23: -1283176553
+      ItemsPotionA_24: 677180208
+      ItemsPotionA_25: -1992559511
+      ItemsPotionA_26: -757326477
+      ItemsPotionA_27: 745613655
+      ItemsPotionA_28: -89367097
+      ItemsPotionA_29: -359841005
+      ItemsPotionA_3: 1071546562
+      ItemsPotionA_30: -587058068
+      ItemsPotionA_31: 1494923240
+      ItemsPotionA_4: -610429040
+      ItemsPotionA_5: 1029205867
+      ItemsPotionA_6: 1850090055
+      ItemsPotionA_7: 2045244685
+      ItemsPotionA_8: -1282883031
+      ItemsPotionA_9: -1618988390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
