@@ -62,11 +62,6 @@ public class PlayerMovement : MonoBehaviour
         
             // Assign velocity directly to the Rigidbody
             rb.velocity = moveDirection * _moveSpeed;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
             if (cm.coinCoint >= 100)
             {
                 LEVEL3PORTAL.SetActive(true);

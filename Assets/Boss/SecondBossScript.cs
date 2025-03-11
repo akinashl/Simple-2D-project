@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class SecondBossScript : MonoBehaviour
@@ -12,10 +9,10 @@ public class SecondBossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(boss.health <= 50 && dropbelow == false)
+        if(boss.health <= 500 && dropbelow == false)
         {
-            Instantiate(BOSS, bosslocation.position, bosslocation.rotation);
             dropbelow = true;
+            Instantiate(BOSS, bosslocation.position, bosslocation.rotation);
         }
     }
 }

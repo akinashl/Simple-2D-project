@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea476c4e6e32f042a13b2c58b45baa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potion: {fileID: 8167711334804128790, guid: 428a89d0387855145aa6187ba8708d13, type: 3}
+  potion: {fileID: 45452443517878836, guid: 6b3ee606b3a402b48910670558ac16b6, type: 3}
   potionspawn: {fileID: 2224716880264172476}
   potionrotation: {fileID: 2224716880264172476}
   health: 0

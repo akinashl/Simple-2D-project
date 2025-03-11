@@ -7,6 +7,7 @@ public class PlayerShoting : MonoBehaviour
     public Transform firePointRotation;
     public Transform bulletSpawnPoint;
     PlayerMovement player;
+    public float timer;
     
 
     public float bulletSpeed = 20f;
@@ -29,6 +30,12 @@ public class PlayerShoting : MonoBehaviour
         {
             Shoot();
         }
+        if(Input.GetButton("Fire1") && timer <= 0)
+        {
+            Shoot();
+            timer = 0.1f;
+        }
+        timer -= Time.deltaTime;
         }
     }
 

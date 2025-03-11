@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossScript : MonoBehaviour
 {
     public float timer;
-    public float health = 1000;
+    public float health;
     public PlayerMovement pm;
     public BulletScript bs;
     public GameObject golem;
@@ -13,6 +13,8 @@ public class BossScript : MonoBehaviour
     public Transform spawnpos1;
     public Transform spawnpos2;
     public Transform spawnpos3;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,17 +42,16 @@ public class BossScript : MonoBehaviour
         timer = 10f;
         }
         timer -= Time.deltaTime;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
-        {
-            pm.health -= 40;
-            health -= 40;
-        }
         if(collision.gameObject.CompareTag("Bullet"))
         {
-            health -= bs.damage;
+            health -= 10;
         }
     }
 }
