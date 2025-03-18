@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +6,8 @@ public class Paused : MonoBehaviour
 {
     public float Timer;
     public float SecondTimer;
+    bool playerDead = false;
+    bool bossDead = false;
     PlayerMovement player;
     public BossScript boss;
     public GameObject PausePanel;
@@ -15,6 +15,7 @@ public class Paused : MonoBehaviour
     public GameObject DeathScreenBG;
     public GameObject FinishingScreen;
     public GameObject FinishScreenBG;
+    public Scene MenuScene;
 
     void Start()
     {
@@ -29,10 +30,6 @@ public class Paused : MonoBehaviour
         FinishingScreen.SetActive(false);
 
         FinishScreenBG.SetActive(false);
-
-        Timer = 3f;
-        
-        SecondTimer = 2f;
     }
 
     // Update is called once per frame
@@ -56,31 +53,34 @@ public class Paused : MonoBehaviour
                 }
             }
 
-            if(player.health <= 0)
+            Health();
+
+            FinishingTheGame();
+
+            if(bossDead == true)
             {
-                Health();
+                SecondTimer -= Time.deltaTime;
             }
 
-            if(boss != null)
+            if (playerDead == true)
             {
-                if(boss.health <= 0)
-                {
-                    FinishingTheGame();
-                }
+                Timer -= Time.deltaTime;
             }
         }
     }
     public void FinishingTheGame()
     {
-        if(boss.health <= 0)
+        if(boss.health <= 0 && !bossDead)
         {
-            SecondTimer -= Time.deltaTime;
             FinishingScreen.SetActive(true);
             FinishScreenBG.SetActive(true);
+            SecondTimer = 3f;
             Debug.Log("Player Won");
+            player.health = 10000;
+            bossDead = true;
         }
 
-        if(SecondTimer <= 0f)
+        if(SecondTimer < 0f)
         {
             SceneManager.LoadScene(0);
         }
@@ -88,15 +88,16 @@ public class Paused : MonoBehaviour
 
     public void Health()
     {
-        if(player.health <= 0)
+        if(player.health <= 0 && !playerDead)
         {
             DeathScreen.SetActive(true);
             DeathScreenBG.SetActive(true);
-            Timer -= Time.deltaTime;
+            Timer = 3f;
             Debug.Log("Death");
+            playerDead = true;
         }
 
-        if(Timer <= 0f)
+        if(Timer < 0f)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

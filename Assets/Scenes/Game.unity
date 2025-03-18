@@ -1640,7 +1640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.7, y: -162.6, z: -10}
+  m_LocalPosition: {x: -16.29, y: 28.56, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68a2e7cfdb314348ba9e0e5b99427c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
+  Timer: 3
   SecondTimer: 0
   boss: {fileID: 4481230513120286581, guid: d8f144b9bc72a7f418e928cde6c803c5, type: 3}
   PausePanel: {fileID: 1814154357}
@@ -1701,6 +1701,8 @@ MonoBehaviour:
   DeathScreenBG: {fileID: 1666625691}
   FinishingScreen: {fileID: 712659241}
   FinishScreenBG: {fileID: 545937112}
+  MenuScene:
+    m_Handle: 0
 --- !u!1 &545937112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1760,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
+  m_PlaybackSpeed: 2
   m_AudioOutputMode: 2
   m_TargetAudioSources:
   - {fileID: 0}
@@ -1832,7 +1834,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 197926713, guid: ef500f202c8e2c047b6f42d0887279aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2990,7 +2992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 197926713, guid: ef500f202c8e2c047b6f42d0887279aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -43338,7 +43340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 197926713, guid: ef500f202c8e2c047b6f42d0887279aa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -45056,7 +45058,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &1919196726
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45074,7 +45076,7 @@ RectTransform:
   m_GameObject: {fileID: 1919196724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.9192}
+  m_LocalScale: {x: 3, y: 3, z: 2.2924843}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1773392268}
@@ -45082,7 +45084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -729, y: 293}
+  m_AnchoredPosition: {x: -611.2, y: 275.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1977006383
@@ -104948,11 +104950,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1316723105513382823, guid: 7029b6d95c1223645917491a8dcd35aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.7
+      value: -16.29
       objectReference: {fileID: 0}
     - target: {fileID: 1316723105513382823, guid: 7029b6d95c1223645917491a8dcd35aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -162.6
+      value: 28.56
       objectReference: {fileID: 0}
     - target: {fileID: 1316723105513382823, guid: 7029b6d95c1223645917491a8dcd35aa, type: 3}
       propertyPath: m_LocalPosition.z

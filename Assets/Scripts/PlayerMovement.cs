@@ -40,9 +40,6 @@ public class PlayerMovement : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         health = _maxHealth;
-
-        Debug.Log("Player have been spawned");
-        Debug.Log("Rigidbody velocity" + _moveSpeed);
         playerRenderer = GetComponent<Renderer>();
     }
 
@@ -80,6 +77,12 @@ public class PlayerMovement : MonoBehaviour
     {
         HealthScriptForOthers hp =  other.GetComponent<HealthScriptForOthers>();
         if (other.gameObject.tag == "Enemy")
+        {
+            health -= hp.damage;
+            Debug.Log("DAMAGE TAKEN");
+            UpdateHealth();
+        }
+        if (other.gameObject.tag == "Slime")
         {
             health -= hp.damage;
             Debug.Log("DAMAGE TAKEN");
