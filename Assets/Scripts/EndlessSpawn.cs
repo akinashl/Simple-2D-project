@@ -9,8 +9,8 @@ public class EndlessSpawn : MonoBehaviour
     public Transform secondspn;
     public Transform thirdspn;
 
-    float spawnInterval = 4f;
-    float minimumSpawnInterval = 1f;
+    float spawnInterval = 5f;
+    float minimumSpawnInterval = 2f;
     float intervalDecrease = 0.1f;
     public bool level1completed;
 
@@ -49,5 +49,14 @@ public class EndlessSpawn : MonoBehaviour
     public void StopSpawningEnemies()
     {
         StopCoroutine(spawnCoroutine);
+        DestroyObjects();
+    }
+    public void DestroyObjects()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Slime");
+        foreach (GameObject target in gameObjects)
+        {
+            GameObject.Destroy (target);
+        }
     }
 }

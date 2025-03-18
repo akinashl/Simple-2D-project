@@ -32,7 +32,7 @@ public class Paused : MonoBehaviour
 
         Timer = 3f;
         
-        SecondTimer = 3f;
+        SecondTimer = 2f;
     }
 
     // Update is called once per frame
@@ -74,9 +74,9 @@ public class Paused : MonoBehaviour
     {
         if(boss.health <= 0)
         {
+            SecondTimer -= Time.deltaTime;
             FinishingScreen.SetActive(true);
             FinishScreenBG.SetActive(true);
-            SecondTimer -= Time.deltaTime;
             Debug.Log("Player Won");
         }
 

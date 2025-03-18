@@ -8,10 +8,10 @@ public class ShopCode1 : MonoBehaviour
     public PlayerShoting ps;
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(cm.coinCoint >= 50 && collision.gameObject.CompareTag("Player"))
+        if(cm.coinCoint >= 30 && collision.gameObject.CompareTag("Player"))
         {
             ps.bulletDamage += 15;
-            cm.coinCoint -= 50;
+            cm.coinCoint -= 30;
             Destroy(gameObject);
         }
     }

@@ -13,14 +13,13 @@ public class EndlessSpawnLevel2 : MonoBehaviour
     public Transform fispn;
     public Transform sspn;
 
-    float spawnInterval = 4f;
-    float minimumSpawnInterval = 1f;
-    float intervalDecrease = 0.1f;
-
-    // Start is called before the first frame update
-    void Start()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        SpawnEnemies();
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            SpawnEnemies();
+            Destroy(gameObject);
+        }
     }
     void SpawnEnemies()
     {
